@@ -1,0 +1,29 @@
+//
+// required arguments
+//
+
+cluster_name     = "tf-k3sup"
+aws_region       = "us-gov-west-1"
+vpc_id           = "vpc-CHANGEME"
+subnet_id        = "subnet-CHANGEME"
+kube_config_path = "./generated/tf-k3sup.kubeconfig"
+private_key_path = "./generated/tf-k3sup.pem"
+
+//
+// other useful arguments
+//
+
+// k3s_version         = "v1.19.8+k3s1"
+// aws_instance_type   = "t2.medium"
+// aws_root_block_size = "20"
+// agent_count         = "3"
+
+//
+// region specific arguments
+//
+
+// ami_owner_id            = ["513442679011"]
+// ami_filter_name         = ["ubuntu/images/*ubuntu-focal-20.04-amd64-server-*"]
+// ami_root_device_type    = ["ebs"]
+// ami_virtualization_type = ["hvm"]
+// ami_instance_user       = "ubuntu"
