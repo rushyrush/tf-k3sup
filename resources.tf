@@ -32,7 +32,7 @@ resource "aws_instance" "server" {
   provisioner "remote-exec" {
     inline = [
       "sudo sh -c 'echo 'vm.max_map_count=262144' >> /etc/sysctl.d/vm-max_map_count.conf'",
-      "sysctl -w vm.max_map_count=262144"
+      "sudo sysctl -w vm.max_map_count=262144"
     ]
   }
 
@@ -91,7 +91,7 @@ resource "aws_instance" "agent" {
   provisioner "remote-exec" {
     inline = [
       "sudo sh -c 'echo 'vm.max_map_count=262144' >> /etc/sysctl.d/vm-max_map_count.conf'",
-      "sysctl -w vm.max_map_count=262144"
+      "sudo sysctl -w vm.max_map_count=262144"
     ]
   }
   # install k3s server with k3sup
